@@ -54,6 +54,7 @@ Running `lerna version --conventional-commits` without the above flags will rele
 - [`--git-remote`](#--git-remote-name)
 - [`--create-release`](#--create-release-type)
 - [`--ignore-changes`](#--ignore-changes)
+- [`--ignore-private`](#--ignore-private)
 - [`--ignore-scripts`](#--ignore-scripts)
 - [`--include-merged-tags`](#--include-merged-tags)
 - [`--message`](#--message-msg)
@@ -241,6 +242,10 @@ Pass `--no-ignore-changes` to disable any existing durable configuration.
 >
 > 1. The latest release of the package is a `prerelease` version (i.e. `1.0.0-alpha`, `1.0.0–0.3.7`, etc.).
 > 2. One or more linked dependencies of the package have changed.
+
+### `--ignore-private`
+
+When passed, this flag omits private packages during `lerna version`.
 
 ### `--ignore-scripts`
 
