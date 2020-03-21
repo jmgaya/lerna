@@ -206,6 +206,11 @@ class VersionCommand extends Command {
         }
       }
 
+      if (node.pkg.private && this.options.ignorePrivate) {
+        this.logger.info("version", "Skipping private package %j", node.name);
+        return false;
+      }
+
       return !!node.version;
     });
 

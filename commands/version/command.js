@@ -129,6 +129,10 @@ exports.builder = (yargs, composed) => {
       describe: "Pass the `--sign` flag to `git tag`.",
       type: "boolean",
     },
+    "ignore-private": {
+      describe: "Pass the `--ignore-private` flag to omit private packages.",
+      type: "boolean",
+    },
     "tag-version-prefix": {
       describe: "Customize the tag prefix. To remove entirely, pass an empty string.",
       type: "string",

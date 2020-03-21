@@ -494,6 +494,12 @@ describe("VersionCommand", () => {
       await lernaVersion(testDir)();
       expect(Object.keys(writePkg.updatedVersions())).not.toContain("package-4");
     });
+
+    it("ignores private packages for version --ignore-private", async () => {
+      const testDir = await initFixture("versioned-private");
+      await lernaVersion(testDir)("--ignore-private");
+      expect(Object.keys(writePkg.updatedVersions())).not.toContain("package-3");
+    });
   });
 
   describe("working on a detached HEAD", () => {
